@@ -1,0 +1,139 @@
+SMART MANUFACTURING DOWNTIME INTELLIGENCE AGENT
+Architecture Description Document
+
+------------------------------------------------------------
+1. OVERVIEW
+------------------------------------------------------------
+
+This system is an AI-powered predictive maintenance and
+failure propagation intelligence agent built for Industry 4.0 environments.
+
+The system combines:
+
+• Synthetic sensor telemetry
+• Maintenance history simulation
+• Neo4j knowledge graph modeling
+• LangGraph deterministic agent workflow
+• GraphRAG-based reasoning
+• LLaMA3 (Ollama) executive explanation
+
+The objective is to predict equipment failure, trace
+dependency impact chains, and generate business-ready
+maintenance recommendations.
+
+------------------------------------------------------------
+2. ARCHITECTURE LAYERS
+------------------------------------------------------------
+
+LAYER 1: DATA SIMULATION LAYER
+
+This layer generates synthetic manufacturing data including:
+
+• Sensor logs (temperature, vibration, pressure, etc.)
+• Maintenance history records
+
+Purpose:
+To simulate real-world factory telemetry for predictive analysis.
+
+
+------------------------------------------------------------
+
+LAYER 2: KNOWLEDGE GRAPH LAYER (Neo4j)
+
+This layer models machine relationships using graph structures.
+
+Graph Schema:
+
+Machine → DEPENDS_ON → Machine
+Machine → LOCATED_IN → Production Line
+Machine → MAINTAINED_BY → Vendor
+
+Purpose:
+To represent machine dependencies and allow
+failure propagation tracing across the factory.
+
+
+------------------------------------------------------------
+
+LAYER 3: AGENTIC WORKFLOW LAYER (LangGraph)
+
+This layer orchestrates the AI reasoning workflow.
+
+Workflow Steps:
+
+1. Anomaly Detection
+2. Failure Probability Estimation
+3. Impact Analysis via Graph Traversal
+4. Root Cause Chain Identification
+5. GraphRAG Context Retrieval
+6. Executive Summary Generation
+7. Maintenance Plan Creation
+
+Purpose:
+To ensure deterministic, state-driven execution
+without hallucination risk.
+
+
+------------------------------------------------------------
+
+LAYER 4: LLM REASONING LAYER (Ollama - LLaMA3)
+
+This layer generates:
+
+• Executive-level summary
+• Business-friendly explanation
+• Preventive maintenance strategy
+
+Purpose:
+To convert technical graph analysis into actionable
+decision intelligence for operations teams.
+
+
+------------------------------------------------------------
+
+LAYER 5: REPORTING LAYER
+
+The final output includes:
+
+• Executive Summary
+• Identified failing machines
+• Impacted production lines
+• Root cause propagation chain
+• Maintenance plan
+
+Reports are saved for operational tracking.
+
+
+------------------------------------------------------------
+3. BUSINESS USE CASE
+------------------------------------------------------------
+
+Scenario:
+"If Machine B fails, what production lines are impacted?"
+
+The system:
+
+• Identifies dependent machines
+• Traces failure propagation
+• Analyzes graph relationships
+• Generates executive explanation
+• Recommends preventive actions
+
+This simulates real-world smart factory intelligence systems.
+
+
+------------------------------------------------------------
+4. TECHNOLOGY STACK
+------------------------------------------------------------
+
+• Python
+• LangGraph
+• Neo4j
+• LangChain
+• GraphRAG
+• Ollama (LLaMA3)
+• Streamlit (Optional UI)
+
+------------------------------------------------------------
+END OF DOCUMENT
+------------------------------------------------------------
